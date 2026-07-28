@@ -44,3 +44,7 @@ benchmark_slm_reboucas_foohs_v*.docx
 
 # Respostas brutas do baseline (contêm nomes reais — PII, não publicar)
 /Refer*respostas*.xlsx
+
+# Chave de decegamento da 2a codificacao (mesma politica do commit e679470,
+# que retirou a chave da 1a rodada de kappa do repo publico).
+data/segunda_codificacao_cega/chave_cega.csv
