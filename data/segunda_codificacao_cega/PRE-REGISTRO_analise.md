@@ -75,7 +75,25 @@ corrigido retroativamente.
   (FM01) e abre espaço para reflexão e ampliação, o que já está discutido no §7.5 e
   continua valendo na leitura dos novos números.
 
-## 6. O que não muda
+## 6. Adendo de instrumento (29 de julho de 2026, antes da anotação)
+
+O instrumento conceitual desta rodada passa a ser o `codebook_respostas_modelo.pdf`
+(v0.2-Q), que substitui o `codebook_funcoes_mediacao.pdf` (v0.2) enviado no pacote de 27 de
+julho. O motivo é documental: aquele documento fora escrito para o corpus dos cinco
+professores e mantinha referências operacionais exclusivas daquela rodada.
+
+O que o adendo **não** altera: as definições, inclusões, exclusões e casos-limite das oito
+funções de mediação são idênticos aos da v0.2, e a definição operacional da coluna MTL é a
+do `GUIA_2a_CODIFICACAO`, congelada na seção 4 acima. O que a v0.2-Q acrescenta é o
+enquadramento do objeto (as 39 saídas do modelo, 13 cenários por 3 repetições), a unidade de
+análise (a devolutiva integral do modelo), a formalização da variável MTL com a sigla
+expandida, e a explicitação das fronteiras entre MTL e FM02, FM03 e FM04.
+
+Esse desdobramento das fronteiras foi redigido nesta data, **antes de qualquer anotação da
+segunda passada**, e é registrado aqui para que a cronologia fique auditável junto ao
+material aberto do estudo.
+
+## 7. O que não muda
 
 As análises acima tocam apenas a RQ2 e a seção de referência especialista. Os achados
 estruturais da RQ1 (312 chamadas primárias, o contraste 39/39 contra 0/39 na família Llama

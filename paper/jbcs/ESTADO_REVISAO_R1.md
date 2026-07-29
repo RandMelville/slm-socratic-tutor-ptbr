@@ -14,13 +14,42 @@ Marcelo.** Todo o resto que não depende dela está feito.
 
 Enviados por e-mail em 27/07: `codificacao_cega_v02.xlsx` e `GUIA_2a_CODIFICACAO.pdf`.
 
-**Pendência conhecida:** o codebook v0.2 (`codebook_funcoes_mediacao.pdf`) **não** foi no
-mesmo e-mail, e o guia o referencia como anexo. Ele nunca viu a v0.2 (a passada de junho foi
-contra a v0.1; a v0.2 nasceu depois, ampliando FM02 e FM04). Precisa ir numa mensagem de
-seguimento, senão ele codifica de memória pela v0.1 e o κ mede a coisa errada.
+**Pendência conhecida (27/07):** o codebook v0.2 (`codebook_funcoes_mediacao.pdf`) **não**
+foi no mesmo e-mail, e o guia o referencia como anexo. Ele nunca viu a v0.2 (a passada de
+junho foi contra a v0.1; a v0.2 nasceu depois, ampliando FM02 e FM04). Precisa ir numa
+mensagem de seguimento, senão ele codifica de memória pela v0.1 e o κ mede a coisa errada.
 
 Também não foram enviados a nota de encaminhamento nem o pré-registro, então ele não sabe
 que isso veio de revisor nem que há prazo.
+
+### Atualização de 29/07: codebook próprio da rodada da Qwen
+
+Ele leu o guia, entendeu a tarefa e travou no codebook: o v0.2 é o documento de junho,
+enquadrado no corpus dos cinco professores (E1–E5, o flag de E4/C10, "próximos passos" que
+já executamos). Pediu um instrumento coerente com esta rodada antes de começar a codificar.
+
+Entregue: **`data/segunda_codificacao_cega/codebook_respostas_modelo.{md,pdf}` (v0.2-Q)**.
+Objeto identificado (as 39 saídas da Qwen), unidade de análise (a devolutiva integral do
+modelo), referências da rodada humana removidas, MTL formalizada com a sigla expandida
+(contração de *MeTaLinguístico*; nome por extenso "foco metalinguístico no texto do aluno"),
+fronteiras MTL × FM02/FM03/FM04 com tabelas 2×2 de exemplos inventados, e o corpus
+registrado como 13 cenários × 3 repetições.
+
+Duas escolhas deliberadas, ambas justificadas no documento e na resposta a ele:
+- **As oito definições estão intocadas** (só pontuação). O κ desta rodada é sobre a v0.2 e é
+  a comparação com o vetor de junho que mostra que a ampliação de FM02/FM04 funcionou. Por
+  isso a versão é 0.2-Q, não 0.3.
+- **As âncoras seguem vindo do corpus humano**, sem os códigos E#/C# e com nota de que não
+  fazem parte do material a codificar. Foram elas que calibraram as definições na leitura
+  dele; trocá-las descalibraria o instrumento no meio da série.
+
+Acompanham: `RESPOSTA_marcelo_codebook.{md,pdf}` (rascunho da mensagem, item a item) e uma
+§6 de adendo no `PRE-REGISTRO_analise.md`, datada de 29/07, registrando a substituição de
+instrumento e que a explicitação das fronteiras é anterior a qualquer anotação.
+
+O `GUIA_2a_CODIFICACAO` **não** foi editado (está declarado congelado e já está com ele);
+ainda cita o codebook antigo na linha "Material", e a §0 do codebook novo registra que o
+substitui.
 
 Quando a planilha voltar:
 1. Rodar `src/cohen_kappa.py` sobre as colunas FM01–FM08 e sobre a coluna MTL.
