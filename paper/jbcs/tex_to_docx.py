@@ -30,6 +30,8 @@ CITE = {
     "koch2018coesao": ("Koch", "2018"),
     "koch2020introducao": ("Koch", "2020"),
     "kochelias2016escrever": ("Koch & Elias", "2016"),
+    "byrt1993bias": ("Byrt et al.", "1993"),
+    "feinstein1990high": ("Feinstein & Cicchetti", "1990"),
     "landis1977measurement": ("Landis & Koch", "1977"),
     "liu2025socratic": ("Liu et al.", "2025"),
     "macina2025mathtutorbench": ("Macina et al.", "2025"),
@@ -55,10 +57,12 @@ REF = {
     "sec:instrument": "3.2", "sec:protocol": "3.3", "sec:validation": "3.4",
     "sec:criteria": "3.6", "sec:falsification": "3.8", "sec:llama-failure": "5.1",
     "sec:phi3": "5.2", "sec:robustness": "5.3", "sec:fm-kappa": "7.4",
-    "sec:fm-model": "7.5", "sec:fm-role": "7.6", "app:stats": "A", "app:impl": "B",
+    "sec:fm-model": "7.5", "sec:fm-blind": "7.6", "sec:fm-role": "7.7",
+    "app:stats": "A", "app:impl": "B",
     "tab:scenarios": "1", "tab:efficiency": "2", "tab:conformance": "3",
     "tab:robustness": "4", "tab:metalinguistic": "5", "tab:fm-freq": "6",
     "tab:fm-profiles": "7", "tab:fm-kappa": "8", "tab:fm-model": "9",
+    "tab:fm-kappa-model": "10",
     "fig:fm": "1", "fig:fm-model": "2",
 }
 SUP = {"1": "¹", "2": "²", "3": "³", "***": "***", "*": "*",
@@ -69,9 +73,11 @@ REFERENCES = [
     "Almeida, L. M. de. (1975). O caso da borboleta Atiria (Serie Vaga-Lume). Atica. (Originalmente publicado em 1951 como Atiria, a borboleta, Melhoramentos)",
     "Brasil. (2018). Lei no 13.709, de 14 de agosto de 2018: Lei Geral de Protecao de Dados Pessoais (LGPD). Presidencia da Republica.",
     "Brasil. (2025). Lei no 15.211, de 22 de setembro de 2025: Estatuto Digital da Crianca e do Adolescente (ECA Digital). Presidencia da Republica.",
+    "Byrt, T., Bishop, J., & Carlin, J. B. (1993). Bias, prevalence and kappa. Journal of Clinical Epidemiology, 46(5), 423-429. https://doi.org/10.1016/0895-4356(93)90018-V",
     "Card, S. K., Robertson, G. G., & Mackinlay, J. D. (1991). The information visualizer, an information workspace. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '91) (pp. 181-186). ACM Press. https://doi.org/10.1145/108844.108874",
     "CGI.br, NIC.br, & Cetic.br. (2025). Pesquisa sobre o uso das tecnologias de informacao e comunicacao nas escolas brasileiras: TIC Educacao 2024. Comite Gestor da Internet no Brasil. https://cetic.br/pesquisa/educacao/",
     "Colasanti, M. (1982). A moca tecela. In Doze reis e a moca no labirinto do vento. Nordica.",
+    "Feinstein, A. R., & Cicchetti, D. V. (1990). High agreement but low kappa: I. The problems of two paradoxes. Journal of Clinical Epidemiology, 43(6), 543-549. https://doi.org/10.1016/0895-4356(90)90158-L",
     "Gemma Team. (2024). Gemma 2: Improving open language models at a practical size. arXiv:2408.00118. https://doi.org/10.48550/arXiv.2408.00118",
     "Grattafiori, A., et al. (2024). The Llama 3 herd of models. arXiv:2407.21783. https://doi.org/10.48550/arXiv.2407.21783",
     "Kasneci, E., et al. (2023). ChatGPT for good? On opportunities and challenges of large language models for education. Learning and Individual Differences, 103, 102274. https://doi.org/10.1016/j.lindif.2023.102274",
@@ -124,21 +130,37 @@ def first_braced(s, start_idx):
         i += 1
     return ''.join(out), i
 
-def strip_multicolumn(cell):
-    """\\multicolumn{N}{spec}{content} -> content (spec may contain braces)."""
+def multicolumn_span(cell):
+    """\\multicolumn{N}{spec}{content} -> (content, N). Caso contrario (cell, 1)."""
     cell = cell.strip()
     if not cell.startswith(r'\multicolumn'):
-        return cell
+        return cell, 1
     try:
         i = cell.index('{')
-        _, i = first_braced(cell, i)            # {N}
+        n, i = first_braced(cell, i)            # {N}
         i = cell.index('{', i)
         _, i = first_braced(cell, i)            # {spec}
         i = cell.index('{', i)
         content, _ = first_braced(cell, i)      # {content}
-        return content
+        return content, max(1, int(n.strip()))
     except ValueError:
-        return cell
+        return cell, 1
+
+
+def strip_multicolumn(cell):
+    """\\multicolumn{N}{spec}{content} -> content (spec may contain braces)."""
+    return multicolumn_span(cell)[0]
+
+
+def split_row(s):
+    """Divide a linha em celulas expandindo \\multicolumn para N colunas, de modo
+    que as celulas seguintes caiam no indice correto (ex.: linhas de media)."""
+    out = []
+    for c in s.split('&'):
+        content, n = multicolumn_span(c)
+        out.append(content)
+        out.extend([''] * (n - 1))
+    return out
 
 def render_cite(keys, paren):
     parts = []
@@ -321,7 +343,7 @@ def process_body(doc, body):
             if not s or s.startswith(r'\hline') or s.startswith('%'):
                 continue
             s = s.rstrip('\\').strip()
-            rows.append([strip_multicolumn(c) for c in s.split('&')])
+            rows.append(split_row(s))
         if not rows:
             return
         tcount[0] += 1

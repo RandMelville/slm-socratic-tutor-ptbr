@@ -18,7 +18,7 @@ import re, os
 from tex_to_docx import (
     CITE, REF, REFERENCES, DECL_TITLES,
     first_braced, render_cite, math_sub, preprocess,
-    fmt, plain, strip_multicolumn, strip_comments,
+    fmt, plain, strip_multicolumn, split_row, strip_comments,
     HERE, TEX,
 )
 
@@ -270,7 +270,7 @@ def process_body(flow, body, S):
             if not s or s.startswith(r"\hline") or s.startswith("%"):
                 continue
             s = s.rstrip("\\").strip()
-            rows.append([strip_multicolumn(c) for c in s.split("&")])
+            rows.append(split_row(s))
         if not rows:
             return
         tcount[0] += 1
