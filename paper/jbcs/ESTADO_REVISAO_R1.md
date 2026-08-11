@@ -382,3 +382,73 @@ nova não.
    `.xlsx` do Marcelo vão para o repositório público com as observações qualitativas dele?
 5. Nova versão do Zenodo com tudo da R1.
 6. **Prazo: ~10/09/2026.**
+
+---
+
+## 9. Parecer do Marcelo sobre o v0.3 (10/08/2026)
+
+`Observacoes_Protocolo_Revisado_v03.docx`, na raiz do repositório. Ele aprova o que o v0.3
+incorporou (FM03 revista, evidência segmentada, retirada da ancoragem, separação FM×MTL,
+preservação dos registros, consolidação por cenário) e levanta cinco pontos que **mudam o
+plano acordado em 05/08**.
+
+### 9.1 Regra de validade mínima das FMs (o ponto principal)
+
+> Uma ocorrência somente deve ser codificada como 1 quando, além de apresentar as
+> características formais da função, for semanticamente compatível com sua finalidade
+> mediadora. Movimentos que se apresentem formalmente como uma FM, mas induzam o aluno ao
+> erro, reforcem uma inadequação ou proponham alteração que possa piorar a produção devem ser
+> considerados falsos positivos e codificados como 0.
+
+Operacionalizada função a função, FM01 a FM08, no parecer. Justificativa dele: o artigo já
+assume uma dimensão qualitativa (a RQ2 é "pedagogical-qualitative", e o texto registra que o
+modelo elogia como qualidade o fenômeno plantado como problema, chegando a dizer que
+"positively reinforces it"). Não é a qualidade plena, que depende de aluno real em interação
+e fica para o piloto; é a validade mínima necessária para decidir se a FM ocorreu.
+
+**Registro de evidência segmentada:** havendo um segmento válido e outro falso para a mesma
+FM, codifica 1, e as Observações identificam os dois segmentos com justificativa, para que o
+binário não apague o falso 1.
+
+### 9.2 A codificação nº 4 sai do cálculo
+
+A regra de validade mínima altera o instrumento de forma substantiva e pode mudar códigos que
+ele já atribuiu. Na planilha há linhas com FM marcada como presente e Observação registrando
+que a devolutiva elogia característica inexistente ou dá orientação tecnicamente inadequada.
+A codificação dele é **preservada como percurso metodológico**, não como dado do κ.
+
+### 9.3 Dois novos codificadores, não um
+
+Sequência revista:
+1. Discutir e aprovar entre os autores a versão final do protocolo.
+2. Congelar antes de qualquer codificação.
+3. Entregar o mesmo protocolo a **dois** novos codificadores independentes, sem acesso às codificações anteriores.
+4. Preservar as duas separadamente antes de qualquer confronto.
+5. Calcular a concordância **exclusivamente entre as duas novas codificações**.
+6. Consolidar pelos 13 cenários, com as três execuções de cada.
+7. Revisar método, resultados, discussão, limitações e conclusões.
+8. Relatar aos avaliadores o percurso que levou à revisão do instrumento.
+
+### 9.4 Correção de inferência no v0.3
+
+O v0.3 escreveu: *"retirando a FM03 do cálculo, o κ médio vai de 0,138 para 0,149. O defeito
+de instrumento, portanto, não explica o resultado."* **A segunda frase não decorre da
+primeira.** O que o número mostra é que a regra antiga da FM03 não explica a discrepância
+sozinha, não que o instrumento não contribua. A FM07 tem o mesmo número de divergências e
+precisa ser investigada antes de afastar a hipótese, e a própria regra de validade mínima
+oferece a hipótese: a definição da FM07 pode estar contando como desafio de ampliação
+formulações apoiadas em informação inexistente ou situação comunicativa incoerente.
+**Corrigir no v0.4.**
+
+### 9.5 Outras exigências
+
+- A procedência da codificação por IA precisa aparecer **no texto do artigo** com a mesma clareza que está no protocolo. Hoje o artigo diz "we coded the 39 outputs" e "a single-coder pass", o que permite ler como pessoa.
+- Os exemplos dados aos novos codificadores **não podem** sair das 39 devolutivas que serão recodificadas. Só exemplos construídos ou do corpus humano.
+
+### 9.6 Estado e esforço
+
+- Enviado à Profa. Rosa em 10/08, com o Marcelo em cópia, o parecer + o `PROTOCOLO_REVISADO_v03.docx` (gerado com pandoc; o `paper/md_to_docx.py` usa `textutil`, ignora argumentos de linha de comando e sobrescreve o `.docx` do artigo, não usar).
+- **Aguardando a leitura técnica da Rosa** para escrever o v0.4.
+- **Esforço de referência: a codificação das 39 levou ~10 h.** Com dois codificadores, são ~20 h de trabalho de terceiros.
+- **Os dois codificadores já estão garantidos** (Randerson, 10/08).
+- Prazo da revista: ~10/09/2026.
