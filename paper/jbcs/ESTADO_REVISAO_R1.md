@@ -508,17 +508,41 @@ Três rascunhos no Gmail: um na thread dos autores (congelamento) e um por codif
 destinatário. Os anexos precisam ser arrastados na hora de enviar, a API de rascunho não os aceita
 a partir do repositório.
 
-### 10.3 Cronograma até o prazo
+### 10.3 Recrutamento dos dois codificadores
+
+Decidido em 22/08: os codificadores são recrutados **por chamada pública no LinkedIn**, com
+formulário de inscrição (nome, Lattes, formação, tempo de sala de aula, rede, prática de devolutiva,
+disponibilidade e a pergunta de contato prévio com o estudo). Material em `RECRUTAMENTO.*`, que
+fica fora do versionamento por conter valores e dados de contato.
+
+Perfil exigido: licenciatura em Letras (Português), 3 anos ou mais de Ensino Fundamental II com
+experiência em 8º ou 9º ano, prática atual de corrigir produção textual com devolutiva escrita.
+Impedidos: autores, integrantes do grupo de pesquisa, os cinco professores do corpus humano e quem
+já teve contato com o material do estudo.
+
+O recrutamento aberto **melhora o artigo**, e não só resolve a logística: a seção de confiabilidade
+passa a poder declarar quem codificou, com que qualificação, o que garantiu a independência e que a
+remuneração foi fechada antes e não depende do resultado. O rascunho dessa frase, em inglês, está
+no `RECRUTAMENTO.md` §6.
+
+Esforço informado aos candidatos: ~10 h, que é o registro do próprio Marcelo ao codificar as mesmas
+39 devolutivas. É o único dado real de esforço que existe sobre esta tarefa.
+
+### 10.4 Cronograma até o prazo
 
 | Quando | O quê |
 |---|---|
-| até 26/08 | aval do Marcelo (fidelidade ao parecer) e da Rosa; congelamento |
-| 26/08 | compartilhar as planilhas e enviar os convites |
-| até 02/09 | as duas codificações, ~10 h cada |
-| 03–09/09 | κ(A,B), consolidação por cenário, exame da FM07, reescrita de método, resultados, discussão, limitações e conclusão |
+| 22/08 | publicar a chamada e abrir o formulário |
+| até 26/08 | inscrições |
+| 27/08 | escolha das duas pessoas, combinação do valor, compartilhamento das planilhas e envio dos convites |
+| até 05/09 | as duas codificações, ~10 h cada |
+| 05–09/09 | κ(A,B), consolidação por cenário, exame da FM07, reescrita de método, resultados, discussão, limitações e conclusão |
 | 10/09 | prazo da revista |
 
-### 10.4 Pendências que não dependem de terceiros
+**Sem folga.** Se em 27/08 o formulário não tiver dois nomes de perfil adequado, o plano B é convite
+direto a contatos com o mesmo perfil e o mesmo valor, decidido no mesmo dia.
+
+### 10.5 Pendências que não dependem de terceiros
 
 - `analises/kappa_v04.py`: adaptar `kappa_2a_codificacao.py` para o par A × B; dá para escrever e testar com dados sintéticos enquanto a codificação acontece.
 - Zenodo: só a v1.5.0 de 29/06 está depositada, sem nada da R1. A Data Availability declara material que não está lá.
