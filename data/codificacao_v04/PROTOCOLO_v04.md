@@ -8,9 +8,15 @@
 e o `codebook_respostas_modelo.md` (v0.2-Q). Nenhuma nova codificação começa antes do
 congelamento registrado na seção 9.
 
+> **Documento interno.** Este protocolo é o registro metodológico do estudo, citado no artigo.
+> Ele **não** é o material entregue aos codificadores: eles recebem o `GUIA_PROFESSOR` e a
+> planilha. O guia é a versão operacional deste documento, em linguagem de professor, sem
+> nenhuma alteração de definição.
+
 Esta versão incorpora o parecer do Prof. Marcelo Magalhães Foohs de 10 de agosto de 2026
 (`Observacoes_Protocolo_Revisado_v03.docx`) e a leitura técnica da Profa. Rosa Maria Vicari de 11
-de agosto de 2026. É o instrumento que vai, sem alterações, para os dois novos codificadores.
+de agosto de 2026. É o instrumento congelado da rodada final, e chega aos dois novos
+codificadores traduzido no `GUIA_PROFESSOR`, sem alteração de definição.
 
 ---
 
@@ -312,13 +318,14 @@ devolutivas.
 
 ## 4. O que cada codificador recebe
 
-- Este documento (protocolo v0.4, versão congelada).
-- `ANEXO_CALIBRACAO`, com treze exemplos resolvidos.
-- `GUIA_CODIFICADOR`, com o passo a passo prático.
+- `GUIA_PROFESSOR`, documento único de trabalho: as oito definições e a da MTL em linguagem de professor, um exemplo por função, três exemplos da regra de validade mínima, as regras de independência e o prazo. É a versão operacional deste protocolo, sem alteração de definição.
 - Uma planilha individual no Google Sheets, com as 39 devolutivas embaralhadas, sem indicação de cenário, repetição ou ordem original, com as colunas `ID`, `Texto do aluno`, `Devolutiva`, `FM01` a `FM08`, `MTL` e `Observações`.
 
-Não recebe: nenhuma codificação anterior, a chave de decegamento, os resultados já apurados, nem a
-planilha do outro codificador.
+Não recebe: este protocolo, o anexo de calibração, nenhuma codificação anterior, a chave de
+decegamento, os resultados já apurados, nem a planilha do outro codificador. O protocolo e o anexo
+são documentos internos, escritos para os autores e para o relato no artigo; entregá-los à tarefa
+acrescentaria histórico do estudo e plano de análise, que são justamente o tipo de informação que
+pode ancorar a leitura.
 
 Os dois recebem exatamente o mesmo material e os mesmos identificadores `R01` a `R39`, o que é
 condição para o cálculo de concordância linha a linha.
@@ -405,7 +412,7 @@ errata datada, anexada ao protocolo, e não edição silenciosa.
 | Autor | Concordância | Data |
 |---|---|---|
 | Randerson O. M. Rebouças | sim, redação desta versão | 22/08/2026 |
-| Marcelo Magalhães Foohs | parecer de 10/08/2026 incorporado; aguardando confirmação de fidelidade | |
+| Marcelo Magalhães Foohs | parecer de 10/08/2026, incorporado integralmente nesta versão | 10/08/2026 |
 | Rosa Maria Vicari | "concordo totalmente" (leitura técnica do v0.3 e do parecer) | 11/08/2026 |
 
 ---

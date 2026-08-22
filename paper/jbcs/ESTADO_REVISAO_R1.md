@@ -1,8 +1,10 @@
 # Estado da revisão R1 (JBCS) — atualizado em 22/08/2026
 
-> **➡️ O estado atual está na §10 (22/08): protocolo v0.4 escrito, pacote dos dois codificadores
-> pronto, aguardando o aval do Marcelo e da Rosa para congelar e enviar.** A §8 explica o que caiu
-> e a §9 registra o parecer que mudou o plano. Leia as três, nessa ordem, se estiver retomando.
+> **➡️ O estado atual está na §10 (22/08): protocolo v0.4 congelado, guia do professor e planilhas
+> prontos. O aval está dado (parecer do Marcelo em 10/08, aceite da Rosa em 11/08). Falta só o
+> e-mail dos dois codificadores para compartilhar as planilhas e enviar os convites.** A §8 explica
+> o que caiu e a §9 registra o parecer que mudou o plano. Leia as três, nessa ordem, se estiver
+> retomando.
 
 > **⚠️ LEIA A §8 ANTES DE QUALQUER COISA.** Em 30/07 o Marcelo apontou que as duas
 > codificações comparadas no κ das FMs foram produzidas sob protocolos diferentes, o que
@@ -480,15 +482,20 @@ em vez de escondê-la, com a conclusão final juntando os resultados.
 
 Tudo em `data/codificacao_v04/`:
 
+**Vai aos codificadores:** só o `GUIA_PROFESSOR` e a planilha. O material foi simplificado em
+22/08 porque quem codifica são professores, não metodologistas: protocolo com histórico do estudo,
+plano de análise e limitações é documento de artigo, não de tarefa, e treze vetores resolvidos
+funcionariam como gabarito.
+
 | Arquivo | O que é |
 |---|---|
-| `PROTOCOLO_v04.md/.pdf/.docx` | instrumento congelado; regra de validade mínima na §3.0, item de falso positivo em cada FM, inferência da FM03/FM07 corrigida na §1.3, codificação nº 4 fora do κ na §1.5 |
-| `ANEXO_CALIBRACAO.md/.pdf/.docx` | treze exemplos resolvidos, cinco de falso positivo, um de evidência segmentada |
-| `GUIA_CODIFICADOR.md/.pdf/.docx` | passo a passo, duas varreduras, prazo, regras de independência |
+| `GUIA_PROFESSOR.md/.pdf/.docx` | **único documento entregue.** 3 páginas, ~1.150 palavras, sem jargão de método: oito definições em linguagem de professor com um exemplo cada, a coluna MTL, a regra do "parece mas não é" com três exemplos, quando escrever em Observações, três combinados de independência, prazo. Não diz a procedência do corpus, que é contada depois da entrega |
+| `PROTOCOLO_v04.md/.pdf/.docx` | **interno.** Instrumento congelado e registro metodológico citado no artigo; regra de validade mínima na §3.0, item de falso positivo em cada FM, inferência da FM03/FM07 corrigida na §1.3, codificação nº 4 fora do κ na §1.5 |
+| `ANEXO_CALIBRACAO.md/.pdf/.docx` | **interno.** Treze exemplos resolvidos, cinco de falso positivo, um de evidência segmentada; fonte de onde saíram, reduzidos, os exemplos do guia |
 | `build_pacote_v04.py` | reconstrói as 39 da fonte e afirma, por assert, que são idênticas às de julho; gera os dois pacotes |
-| `verifica_exemplos.py` | confere por programa que nenhum exemplo sai das 39 (85 trechos, 19 do corpus humano, 0 das 39) |
+| `verifica_exemplos.py` | confere por programa que nenhum exemplo dos três documentos sai das 39 (102 trechos, 19 do corpus humano, 0 das 39) |
 | `pacote_v04_codificador_{A,B}.csv` | material de anotação, mesmos IDs R01–R39 para os dois |
-| `EMAIL_congelamento_autores.md`, `EMAIL_convite_codificador.md` | textos dos e-mails |
+| `EMAIL_convite_codificador.md` | texto do convite. Não há e-mail de congelamento: o parecer de 10/08 e o aceite da Rosa de 11/08 já fecharam a decisão, e o v0.4 é a execução dela |
 
 Planilhas no Google Sheets, criadas e **ainda não compartilhadas** (faltam os e-mails dos dois
 codificadores):

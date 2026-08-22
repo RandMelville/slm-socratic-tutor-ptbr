@@ -1,16 +1,18 @@
 # Anexo de calibração: treze exemplos resolvidos
 
 **Acompanha:** protocolo v0.4 (versão congelada), 22 de agosto de 2026
-**Para:** os dois codificadores da rodada final
 
-Leia este anexo depois do protocolo e antes de abrir a planilha. Cada exemplo traz um texto de
-aluno, uma devolutiva, o vetor correto e a justificativa. Cubra o vetor com a mão, decida sozinho,
-depois confira. Se discordar de alguma resolução, anote e me avise **antes** de começar a
-codificar, não durante.
+> **Documento interno.** Este anexo resolve os casos-limite para os autores e é a fonte de onde
+> saíram, reduzidos, os exemplos do `GUIA_PROFESSOR`. Ele **não** vai aos codificadores: treze
+> vetores resolvidos funcionariam como gabarito e arrastariam a leitura dos dois na mesma direção.
 
-**Procedência.** Nenhum exemplo deste anexo sai das 39 devolutivas que você vai codificar. Todos
-foram construídos para o instrumento ou adaptados do corpus de devolutivas de professores, que não
-faz parte do material a codificar. Isso é verificado por programa (`verifica_exemplos.py`).
+Cada exemplo traz um texto de aluno, uma devolutiva, o vetor resolvido e a justificativa. Serve a
+dois propósitos: fixar entre os autores como as fronteiras difíceis e a regra de validade mínima
+se aplicam, e servir de fonte para os exemplos, muito mais enxutos, que vão no `GUIA_PROFESSOR`.
+
+**Procedência.** Nenhum exemplo deste anexo sai das 39 devolutivas a codificar. Todos foram
+construídos para o instrumento ou adaptados do corpus de devolutivas de professores, que não faz
+parte do material a codificar. Isso é verificado por programa (`verifica_exemplos.py`).
 
 Convenção do vetor: `FM01 FM02 FM03 FM04 FM05 FM06 FM07 FM08 | MTL`.
 

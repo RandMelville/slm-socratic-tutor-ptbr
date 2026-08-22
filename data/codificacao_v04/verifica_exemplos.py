@@ -3,7 +3,8 @@ Verifica, por programa, a exigencia do parecer de 10/08/2026: nenhum exemplo ent
 codificadores pode sair das 39 devolutivas que eles vao recodificar.
 
 Ler os dois documentos e confiar na memoria nao serve. O script extrai todo trecho citado do
-PROTOCOLO_v04.md e do ANEXO_CALIBRACAO.md (texto entre aspas e linhas de citacao), normaliza
+PROTOCOLO_v04.md, do ANEXO_CALIBRACAO.md e do GUIA_PROFESSOR.md, que e o documento que vai
+de fato as maos dos codificadores (texto entre aspas e linhas de citacao), normaliza
 acentuacao, caixa e pontuacao, e procura cada janela de 6 palavras dentro do corpus das 39
 devolutivas. Qualquer coincidencia e falha.
 
@@ -23,7 +24,7 @@ from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
 ROOT = AQUI.parents[1]
-DOCS = [AQUI / "PROTOCOLO_v04.md", AQUI / "ANEXO_CALIBRACAO.md"]
+DOCS = [AQUI / "PROTOCOLO_v04.md", AQUI / "ANEXO_CALIBRACAO.md", AQUI / "GUIA_PROFESSOR.md"]
 PACOTE = ROOT / "data" / "segunda_codificacao_cega" / "codificacao_cega_v02.csv"
 HUMANO = ROOT / "data" / "baseline_humano" / "respostas_professores.jsonl"
 
