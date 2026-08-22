@@ -1,4 +1,8 @@
-# Estado da revisão R1 (JBCS) — atualizado em 05/08/2026
+# Estado da revisão R1 (JBCS) — atualizado em 22/08/2026
+
+> **➡️ O estado atual está na §10 (22/08): protocolo v0.4 escrito, pacote dos dois codificadores
+> pronto, aguardando o aval do Marcelo e da Rosa para congelar e enviar.** A §8 explica o que caiu
+> e a §9 registra o parecer que mudou o plano. Leia as três, nessa ordem, se estiver retomando.
 
 > **⚠️ LEIA A §8 ANTES DE QUALQUER COISA.** Em 30/07 o Marcelo apontou que as duas
 > codificações comparadas no κ das FMs foram produzidas sob protocolos diferentes, o que
@@ -452,3 +456,63 @@ formulações apoiadas em informação inexistente ou situação comunicativa in
 - **Esforço de referência: a codificação das 39 levou ~10 h.** Com dois codificadores, são ~20 h de trabalho de terceiros.
 - **Os dois codificadores já estão garantidos** (Randerson, 10/08).
 - Prazo da revista: ~10/09/2026.
+
+---
+
+## 10. Protocolo v0.4 e pacote dos codificadores (22/08/2026)
+
+### 10.1 A Rosa respondeu em 11/08
+
+Duas mensagens, na thread "Artigo JBCS - Benchmark de modelos - Protocolo revisado de codificação":
+
+> "Randerson, concordo com encaminhar os dois documentos. Eu já tive uma situação semelhante ao
+> analisar ressonâncias Magneticas (para um colega da área médica): as ressonâncias eram produzidas
+> por máquinas diferentes. Mas a revista não colocou problemas, apenas apontamos estas diferenças.
+> Como se tratava de medir um espaço do cérebro humano, cada conjunto de RMI foi analisado em
+> função das características de cada máquina. A conclusão final juntou os resultados e foi única."
+
+> "Prezado Randerson, concordo totalmente."
+
+Vale para a carta-resposta: é um precedente de co-autora para declarar a diferença de procedência
+em vez de escondê-la, com a conclusão final juntando os resultados.
+
+### 10.2 O que foi produzido
+
+Tudo em `data/codificacao_v04/`:
+
+| Arquivo | O que é |
+|---|---|
+| `PROTOCOLO_v04.md/.pdf/.docx` | instrumento congelado; regra de validade mínima na §3.0, item de falso positivo em cada FM, inferência da FM03/FM07 corrigida na §1.3, codificação nº 4 fora do κ na §1.5 |
+| `ANEXO_CALIBRACAO.md/.pdf/.docx` | treze exemplos resolvidos, cinco de falso positivo, um de evidência segmentada |
+| `GUIA_CODIFICADOR.md/.pdf/.docx` | passo a passo, duas varreduras, prazo, regras de independência |
+| `build_pacote_v04.py` | reconstrói as 39 da fonte e afirma, por assert, que são idênticas às de julho; gera os dois pacotes |
+| `verifica_exemplos.py` | confere por programa que nenhum exemplo sai das 39 (85 trechos, 19 do corpus humano, 0 das 39) |
+| `pacote_v04_codificador_{A,B}.csv` | material de anotação, mesmos IDs R01–R39 para os dois |
+| `EMAIL_congelamento_autores.md`, `EMAIL_convite_codificador.md` | textos dos e-mails |
+
+Planilhas no Google Sheets, criadas e **ainda não compartilhadas** (faltam os e-mails dos dois
+codificadores):
+
+- Codificador A: `1wIGoRDItjZiRW-duak_gKpmzJEpBbE8MYHpO7nSv4gg`
+- Codificador B: `1gjRHxW-Uh9UpiiFJS6HY7CltzckbK8pCM0nhEuhu3T0`
+
+Três rascunhos no Gmail: um na thread dos autores (congelamento) e um por codificador, sem
+destinatário. Os anexos precisam ser arrastados na hora de enviar, a API de rascunho não os aceita
+a partir do repositório.
+
+### 10.3 Cronograma até o prazo
+
+| Quando | O quê |
+|---|---|
+| até 26/08 | aval do Marcelo (fidelidade ao parecer) e da Rosa; congelamento |
+| 26/08 | compartilhar as planilhas e enviar os convites |
+| até 02/09 | as duas codificações, ~10 h cada |
+| 03–09/09 | κ(A,B), consolidação por cenário, exame da FM07, reescrita de método, resultados, discussão, limitações e conclusão |
+| 10/09 | prazo da revista |
+
+### 10.4 Pendências que não dependem de terceiros
+
+- `analises/kappa_v04.py`: adaptar `kappa_2a_codificacao.py` para o par A × B; dá para escrever e testar com dados sintéticos enquanto a codificação acontece.
+- Zenodo: só a v1.5.0 de 29/06 está depositada, sem nada da R1. A Data Availability declara material que não está lá.
+- Decisão em aberto: as `.xlsx` do Marcelo, com as observações qualitativas linha a linha, vão para o repositório público?
+- A procedência da codificação por IA ainda precisa entrar no **texto do artigo** (§ método), não só no protocolo.
