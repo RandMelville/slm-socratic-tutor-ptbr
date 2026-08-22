@@ -489,12 +489,13 @@ funcionariam como gabarito.
 
 | Arquivo | O que é |
 |---|---|
-| `GUIA_PROFESSOR.md/.pdf/.docx` | **único documento entregue.** 3 páginas, ~1.150 palavras, sem jargão de método: oito definições em linguagem de professor com um exemplo cada, a coluna MTL, a regra do "parece mas não é" com três exemplos, quando escrever em Observações, três combinados de independência, prazo. Não diz a procedência do corpus, que é contada depois da entrega |
+| `GUIA_PROFESSOR.md/.pdf/.docx` | **único documento entregue.** 3 páginas, ~1.150 palavras, sem jargão de método: oito definições em linguagem de professor com um exemplo cada, a coluna MTL, a regra do "parece mas não é" com três exemplos, quando escrever em Observações, três combinados de independência, prazo. Abre com o contexto da tese (PPGIE/UFRGS, devolutiva como 1ª passada com a professora conduzindo) e declara que os textos de aluno são fictícios; fecha dizendo o que acontece com a leitura, o crédito nos agradecimentos e que o pagamento não depende do resultado. Não diz a procedência das devolutivas, que é contada depois da entrega |
 | `PROTOCOLO_v04.md/.pdf/.docx` | **interno.** Instrumento congelado e registro metodológico citado no artigo; regra de validade mínima na §3.0, item de falso positivo em cada FM, inferência da FM03/FM07 corrigida na §1.3, codificação nº 4 fora do κ na §1.5 |
 | `ANEXO_CALIBRACAO.md/.pdf/.docx` | **interno.** Treze exemplos resolvidos, cinco de falso positivo, um de evidência segmentada; fonte de onde saíram, reduzidos, os exemplos do guia |
 | `build_pacote_v04.py` | reconstrói as 39 da fonte e afirma, por assert, que são idênticas às de julho; gera os dois pacotes |
 | `verifica_exemplos.py` | confere por programa que nenhum exemplo dos três documentos sai das 39 (102 trechos, 19 do corpus humano, 0 das 39) |
 | `pacote_v04_codificador_{A,B}.csv` | material de anotação, mesmos IDs R01–R39 para os dois |
+| `RECRUTAMENTO.*` | **fora do versionamento**, só no diretório local (está no `.gitignore`, porque traz valores e dados de contato). Perfil exigido dos codificadores e impedimentos (não pode ser autor nem um dos cinco professores do corpus humano), condições de remuneração, mensagens de recrutamento e o rascunho em inglês da frase de qualificação dos codificadores para a seção de confiabilidade |
 | `EMAIL_convite_codificador.md` | texto do convite. Não há e-mail de congelamento: o parecer de 10/08 e o aceite da Rosa de 11/08 já fecharam a decisão, e o v0.4 é a execução dela |
 
 Planilhas no Google Sheets, criadas e **ainda não compartilhadas** (faltam os e-mails dos dois

@@ -6,14 +6,31 @@
 
 ---
 
+## De onde vem este trabalho
+
+Esta leitura faz parte da minha pesquisa de doutorado no PPGIE/UFRGS, orientada pelo Prof. Marcelo
+Magalhães Foohs. A pesquisa trata de como estudantes do Ensino Fundamental II recebem devolutiva
+sobre o que escrevem, dentro de uma plataforma em que a professora continua conduzindo o trabalho:
+a devolutiva é uma primeira passada, e quem decide o que chega ao aluno é ela.
+
+Para descrever essas devolutivas de um jeito comparável, a pesquisa usa oito tipos de movimento de
+mediação, que são as oito colunas deste guia. O que eu preciso saber é se duas professoras
+experientes, lendo o mesmo material com o mesmo guia, enxergam os mesmos movimentos. Por isso são
+duas leituras independentes, e por isso a sua vale exatamente por ser sua, e não por coincidir com
+a de alguém.
+
+**Os textos de aluno são fictícios**, escritos pela equipe da pesquisa para representar
+dificuldades comuns de 8º e 9º ano. Não há produção real de estudante no material.
+
 ## O que você vai fazer
 
-Você vai ler 39 devolutivas escritas para textos de alunos e, em cada uma, marcar quais tipos de
+Você vai ler 39 devolutivas escritas para esses textos e, em cada uma, marcar quais tipos de
 movimento aquela devolutiva faz: se elogia, se aponta um problema, se pergunta, se dá dica, e
 assim por diante. São nove colunas por devolutiva, cada uma com `1` (aparece) ou `0` (não
 aparece).
 
-A tarefa não é dar nota nem dizer se a devolutiva é boa. É registrar o que está lá.
+A tarefa não é dar nota nem dizer se a devolutiva é boa. É registrar o que está lá. E não é
+avaliação de professor: ninguém está sendo julgado pelo que escreveu.
 
 ## Como preencher a planilha
 
@@ -128,6 +145,19 @@ influenciar a leitura. Conto depois que você entregar.
 
 Algumas vão parecer boas e outras vão parecer pobres. Isso não muda a tarefa: marcar o que está
 lá.
+
+## O que acontece com a sua leitura
+
+As suas marcações entram no artigo de forma agregada, junto com as da outra pessoa, e o que se
+reporta é o quanto as duas leituras convergem. O guia e as planilhas preenchidas vão para o
+material aberto do estudo, que fica público.
+
+Seu nome vai nos agradecimentos do artigo, se você quiser. Na descrição do método aparece só o
+perfil: formação, tempo de sala de aula e etapa em que você atua, sem identificação. Se preferir
+não ser identificada de nenhuma forma, é só me dizer.
+
+O pagamento combinado não depende do que a sua leitura mostrar. Não existe resultado que me sirva
+mais do que outro: divergência entre as duas leituras também é resultado, e resultado publicável.
 
 ## Quando terminar
 
